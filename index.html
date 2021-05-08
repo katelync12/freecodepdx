@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="icon" href="logo.PNG">
-    <title>Westview PAWS - Home</title>
+    <title>Free Code PDX - Home</title>
     <script src="https://kit.fontawesome.com/a268a10631.js" crossorigin="anonymous"></script>
     <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style type="text/css">
@@ -14,12 +14,12 @@
       transition: none !important;
     }
     @font-face {
-      font-family: OpenSans;
-      src: url(OpenSans-Regular.ttf);
+      font-family: Rubik;
+      src: url(Rubik-Regular.ttf);
     }
     @font-face {
-      font-family: Merriweather;
-      src: url(Merriweather-Regular.ttf);
+      font-family: Lora;
+      src: url(Lora-Medium.ttf);
     }
     body {
       padding: 0;
@@ -27,7 +27,7 @@
       background: white;
       font-family: serif;
       box-sizing: border-box;
-      font-family: OpenSans, sans-serif;
+      font-family: Rubik, sans-serif;
     }
     /* navigation start */
     nav { /* navigation bar */
@@ -43,7 +43,7 @@
       transition: 0.5s ease;
     }
     .classfinal {
-      background-color: #262626;
+      background-color: #222222;
       min-height: 8vh;
     }
     .show {
@@ -54,7 +54,7 @@
       text-transform: uppercase;
       letter-spacing: 5px;
       font-size: 20px;
-      font-family: Merriweather, serif;
+      font-family: Lora, serif;
       transition: 0.5s ease;
     }
     .nav { /* collective links */
@@ -73,10 +73,10 @@
       letter-spacing: 3px;
       font-weight: bold;
       font-size: 14px;
-      font-family: OpenSans, sans-serif;
+      font-family: Rubik, sans-serif;
     }
     .nav a:hover {
-      color: #E4B374;
+      color: #72d5e0;
     }
     .burger {
       display: none;
@@ -161,7 +161,7 @@
       background-attachment: fixed;
       overflow: hidden;
       padding: 15%;
-      font-family: OpenSans, sans-serif;
+      font-family: Rubik, sans-serif;
     }
     #imgcontainer:before {
       content: "";
@@ -172,7 +172,7 @@
       width: 100%;
       height: 100%;
       z-index: -10;
-      background-image: linear-gradient(rgba(113, 62, 34, 0.5), rgba(71, 47, 31, 0.5)), url("breadbanner.jpg"); no-repeat;
+      background-image: linear-gradient(rgba(116, 105, 150, 0.5), rgba(104, 110, 170, 0.5)), url("homebanner.jpg"); no-repeat;
       background-position: center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -186,7 +186,7 @@
     }
     #imgcontainer #header { /* title text */
       color: white;
-      font-family: Merriweather, serif;
+      font-family: Lora, serif;
       letter-spacing: 10px;
     }
     @media (min-width: 1201px) {
@@ -207,18 +207,19 @@
     #imgcontainer button {
       margin-top: 30px;
       padding: 20px 40px;
-      background: transparent;
-      border: 2px solid white;
+      background: #5188db;
+      border: 0px solid #5188db;
       font-size: 1.5em;
       color: white;
-      border-radius: 5px;
+      border-radius: 50px;
       letter-spacing: 2px;
       transition: 0.5s ease;
     }
     #imgcontainer button:hover {
       cursor: pointer;
-      background: #3D292D;
-      border: 2px solid #3D292D;
+      background: #356cbf;
+      color: #c6c6c6;
+      border: 0px solid #5c8cce;
     }
     /* navigation end */
     #containercontainer {
@@ -244,22 +245,38 @@
       margin: 0;
     }
     #right h2 {
-      font-family: Merriweather;
+      font-family: Lora;
       font-size: 2.5em;
-      color: #BB7654;
+      color: #5374ba;
       text-transform: uppercase;
     }
     #right p {
       font-size: 1.60em;
       line-height: 1.55em;
-      text-align: justify;
-      color: #3D292D;
+      text-align: left;
+      color: #29273a;
     }
-    #right p:first-letter {
+    /* #right p:first-letter {
       float: left;
       font-size: 2.8em;
       margin-top: 0.27em;
       margin-right: 0.15em;
+    } */
+    #container button {
+      margin-top: 0px;
+      padding: 20px 20px;
+      background: #494384;
+      border: 0px solid #494384;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      letter-spacing: 2px;
+      transition: 0.5s ease;
+    }
+    #container button:hover {
+      cursor: pointer;
+      background: #1d1949;
+      color: #c6c6c6;
     }
     #left #pic1 {
       width: 35%;
@@ -299,7 +316,7 @@
       text-decoration: none;
     }
     #three_pics .pic .middle {
-      background-color: #865544;
+      background-color: #494384;
       color: white;
       font-size: 25px;
       padding: 20px 32px;
@@ -332,44 +349,6 @@
       overflow: hidden;
       border-radius: 5%;
     }
-    #contact-form {
-      width: 60%;
-      margin: 50px auto 0 auto;
-    }
-    #contact-form h2 {
-      font-family: Merriweather;
-      text-align: center;
-      color: #BB7654;
-    }
-    #contact-form form .form-control {
-      font-family: OpenSans;
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-    #contact-form form .submit {
-      background-color: #865544;
-      color: white;
-      padding: 12px auto;
-      border: none;
-      cursor: pointer;
-      width: 20%;
-      border-radius: 5px;
-      transition: 0.5s ease;
-      -webkit-appearance: none;
-    }
-    @media (max-width: 1200px) {
-      #contact-form form .submit {
-        width: 120px;
-      }
-    }
-    #contact-form form .submit:hover {
-      background-color: #3D2920;
-      cursor: pointer;
-    }
     #footer {
       width: 90%;
       background: #222;
@@ -395,7 +374,7 @@
       text-decoration: none;
     }
     #footer a:hover {
-      color: #E4B374;
+      color: #72d5e0;
       cursor: pointer;
     }
     </style>
@@ -404,13 +383,13 @@
     <!-- navigation start -->
     <nav class="classinitial">
       <div class="logo">
-        <h4>Westview PAWS</h4>
+        <h4>Free Code PDX</h4>
       </div>
       <ul class="nav">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="hours.html">Hours</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="meet.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <div class="burger">
         <div class="line1"></div>
@@ -420,9 +399,9 @@
       </div>
     </nav>
     <div id="imgcontainer">
-      <div id="header">WESTVIEW PAWS</div>
-      <h2>Welcome to PAWS! Take a look around!</h2>
-      <a href="#contact-form"><button>Join PAWS! ↓</button></a>
+      <div id="header">FREE CODE PDX</div>
+      <h2>Welcome to FC PDX! Take a look around!</h2>
+      <a href="#containercontainer"><button><b>Learn More </b><i class="fas fa-arrow-down"></i></button></a>
     </div>
     <!-- navigation end -->
     <div id="containercontainer">
@@ -430,54 +409,45 @@
       <div id="left">
         <div id="right">
           <h2>About Us</h2>
-          <p>We are a club at Westview High School that focuses on <b>promoting animal welfare and safety</b>. We help different organizations in the area fundraise and plan projects for animals in need. Are you interested in joining? Fill out the form below.<br><br>Don't hesitate to get in contact with us - we don't bite! 🐶</p>
+          <p>We are a youth-led nonprofit organization that aims to <b>make coding free and accessible to all</b>. We provide free coding lessons to anyone interested in learning Python or JavaScript. Are you interested in joining? <i class="fab fa-android"></i></p>
+          <a href="courses.html"><button><b>Sign Me Up! </b><i class="fas fa-arrow-right"></i></button></a>
         </div>
-        <img src="logoshaded.PNG" id="pic1">
+        <img src="logo.PNG" id="pic1">
       </div>
       <div id="three_pics">
         <div class="pic">
-          <a href="blog.html">
+          <a href="courses.html">
             <div class="img-hover-zoom">
-              <img src="homepic2.jpg">
+              <img src="picbutton1.jpg">
             </div>
-            <div class="middle">b l o g</div>
+            <div class="middle">courses</div>
           </a>
         </div>
         <div class="pic">
-          <a href="events.html">
+          <a href="meet.html">
             <div class="img-hover-zoom">
-              <img src="homepic3.jpg">
+              <img src="picbutton2.jpg">
             </div>
-            <div class="middle">e v e n t s</div>
+            <div class="middle">our team</div>
           </a>
         </div>
         <div class="pic">
-          <a href="hours.html">
+          <a href="contact.html">
             <div class="img-hover-zoom">
-              <img src="homepic4.jpg">
+              <img src="picbutton3.jpg">
             </div>
-            <div class="middle">h o u r s</div>
+            <div class="middle">contact us</div>
           </a>
         </div>
-      </div>
-      <div id="contact-form">
-        <h2>Join PAWS!</h2>
-        <form onsubmit="setTimeout(cleareverything, 10);" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdpZgpdx11h9lpIo-9DNwRYZa4-Xe0BdW4Wm0XFB3VD-1zJEA/formResponse?embedded=true" target="_blank" method="POST" id="mG61Hd">
-          <input name="entry.126709077" type="text" class="form-control" placeholder="Name (first and last)" required><br>
-          <input name="entry.1132009801" type="email" class="form-control" placeholder="Email" required><br>
-          <input name="entry.1214422521" type="number"  min="9" max="12" class="form-control" placeholder="Grade (number only!)" required><br>
-          <textarea name="entry.533436524" class="form-control" placeholder="Questions? We look forward to seeing you!" rows="4"></textarea><br>
-          <input type="submit" class="form-control submit" value="SUBMIT">
-        </form>
       </div>
     </div>
   </div>
     <div id="footer">
-      <p>Thank you for visiting!&nbsp;&nbsp;<i class="fas fa-paw"></i></p>
+      <p>Thank you for visiting!&nbsp;&nbsp;<i class="fas fa-coffee"></i></p>
       <a href="#imgcontainer"><i class="fas fa-chevron-up"></i></a>
       <div>
-        <a href="https://instagram.com/westviewpaws" target="_blank"><i class="fab fa-instagram"></i>&nbsp;westviewpaws</a>&nbsp;&nbsp;
-        <a href="mailto:westviewpaws@gmail.com" target="_blank"><i class="far fa-envelope"></i>&nbsp;westviewpaws@gmail.com</a>
+        <a href="https://instagram.com/freecodepdx" target="_blank"><i class="fab fa-instagram"></i>&nbsp;freecodepdx</a>&nbsp;&nbsp;
+        <a href="mailto:freecodepdx@gmail.com" target="_blank"><i class="far fa-envelope"></i>&nbsp;freecodepdx@gmail.com</a>
       </div>
     </div>
     <script>
@@ -524,16 +494,7 @@
       }, 400);
     });
 
-    function cleareverything() {
-      document.getElementById("mG61Hd").reset();
-    }
-    if (scroll >= 5) {
-        header.removeClass('classinitial')
-                .addClass("classfinal");
-    } else {
-        header.removeClass("classfinal")
-                .addClass('classinitial');
-    }
+    
     </script>
     <script>
         $(function () {
