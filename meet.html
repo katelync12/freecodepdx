@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="logo.PNG">
+    <title>Free Code PDX - Our Team</title>
+    <script src="https://kit.fontawesome.com/a268a10631.js" crossorigin="anonymous"></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+    html {
+      scroll-behavior: smooth;
+    }
+    #imgcontainer:before {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      background-image: linear-gradient(rgba(116, 105, 150, 0.5), rgba(104, 110, 170, 0.5)), url("hoursbanner.jpg"); no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .resize-animation-stopper * {
+      animation: none !important;
+      transition: none !important;
+    }
+    @font-face {
+      font-family: Rubik;
+      src: url(Rubik-Regular.ttf);
+    }
+    @font-face {
+      font-family: Lora;
+      src: url(Lora-Medium.ttf);
+    }
+    body {
+      padding: 0;
+      margin: 0 auto;
+      background: white;
+      font-family: serif;
+      box-sizing: border-box;
+      font-family: Rubik, sans-serif;
+    }
+    /* navigation start */
+    nav { /* navigation bar */
+      z-index: 1;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 12vh;
+      padding: 0 25px;
+      transition: 0.5s ease;
+    }
+    .classfinal {
+      background-color: #222222;
+      min-height: 8vh;
+    }
+    .show {
+      background-color: transparent;
+    }
+    .logo { /* nav label on left */
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 20px;
+      font-family: Lora, serif;
+      transition: 0.5s ease;
+    }
+    .nav { /* collective links */
+      display: flex;
+      max-width: 600px;
+      width: 55vw;
+      justify-content: space-around;
+      padding-right: 50px;
+    }
+    .nav li {
+      list-style: none;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: Rubik, sans-serif;
+    }
+    .nav a:hover {
+      color: #72d5e0;
+    }
+    .burger {
+      display: none;
+      cursor: pointer;
+      padding-right: 50px;
+    }
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+      transition: all 0.5s ease;
+    }
+    @media (max-width: 768px) { /* mobile start */
+      body {
+        overflow-x: hidden;
+      }
+      .nav {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0;
+        background-color: #303030;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+      }
+      .nav li {
+        opacity: 0;
+      }
+      .burger {
+        display: block;
+      }
+    }
+    .nav-active {
+      transform: translateX(0%);
+    }
+    .navactive {
+      opacity: 0;
+    }
+    @keyframes navLinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .toggle .line1 {
+      transform: rotate(-225deg) translate(5px, -6px);
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      transform: rotate(-135deg) translate(5px, 6px);
+    }
+    #sidenav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+      display: none;
+      transition: 0.5s ease;
+    }
+    .toggle #sidenav-overlay {
+      display: block;
+    } /* mobile end */
+    #imgcontainer { /* banner container */
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      overflow: hidden;
+      padding: 150px 10% 130px 10%;
+      font-family: Rubik, sans-serif;
+      text-align: center;
+    }
+    #imgcontainer #header { /* title text */
+      color: white;
+      font-family: Lora, serif;
+      letter-spacing: 10px;
+      margin-bottom: 30px;
+    }
+    @media (min-width: 1205px) {
+      #imgcontainer #header {
+        font-size: 6em;
+      }
+      #imgcontainer h2 {
+        font-size: 2vw;
+        color: white;
+      }
+    }
+    @media (max-width: 1204px) {
+      #imgcontainer #header {
+        font-size: 8vw;
+      }
+      #imgcontainer h2 {
+        font-size: 3vw;
+        color: white;
+      }
+    }
+    /* navigation end */
+    #container {
+      margin: 0 auto;
+      overflow: hidden;
+      background: white;
+      padding: 40px 60px;
+      text-align: center;
+    }
+    #container div {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    #container iframe {
+      width: 100%;
+      height: 500px;
+    }
+    #container a {
+      color: black;
+    }
+    #footer {
+      width: 90%;
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 5%;
+    }
+    #footer p {
+      margin: 0;
+    }
+    @media (max-width: 800px) {
+      #footer {
+        font-size: 2vw;
+      }
+    }
+    #footer div {
+      letter-spacing: 1px;
+    }
+    #footer a {
+      color: white;
+      transition: 0.5s ease;
+      text-decoration: none;
+    }
+    #footer a:hover {
+      color: #72d5e0;
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- navigation start -->
+    <nav class="classinitial">
+      <div class="logo">
+        <h4>Free Code PDX</h4>
+      </div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="meet.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div id="sidenav-overlay"></div>
+      </div>
+    </nav>
+    <div id="imgcontainer">
+      <div id="header">Our Team</div>
+      <h2>Meet the people who make Free Code PDX possible.</h2>
+    </div>
+    <!-- navigation end -->
+    <div id="container">
+      <div>
+        <p><b>THIS PAGE IS CURRENTLY UNDER CONSTRUCTION. PLEASE CHECK BACK LATER.</b></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo gravida eleifend. Phasellus ac laoreet orci. Nam sed ultricies enim. Sed sed ipsum tortor. Curabitur eu suscipit nulla, at ullamcorper purus. Proin vehicula finibus ante, suscipit vestibulum diam aliquam eu. Vivamus luctus feugiat lobortis. Ut molestie elit finibus nibh faucibus, quis auctor mauris viverra. Curabitur quis tellus id urna eleifend ornare id et mi. Etiam vel turpis nec nisl venenatis lacinia non quis magna. Aenean id scelerisque nibh. Sed enim purus, placerat a tempus vel, elementum sed sem. Nunc venenatis, nibh vitae accumsan scelerisque, magna urna blandit nibh, id ultrices arcu justo sit amet lorem. In eu venenatis ipsum. Aenean at porttitor mi, ac lacinia leo. Cras consectetur rutrum dapibus.</p>
+        <p>Donec ultrices iaculis elit at scelerisque. Aenean semper pellentesque mi eget gravida. Nullam feugiat posuere consequat. Curabitur tincidunt ipsum vitae vehicula pulvinar. Nulla hendrerit suscipit magna id semper. Quisque egestas, nisi sit amet dapibus hendrerit, quam tortor fermentum neque, sed dapibus purus mauris in diam. Cras tempor, est vitae tincidunt auctor, lorem urna vehicula nisl, at commodo nisl ex vitae ipsum. Pellentesque tristique dignissim dapibus. Maecenas suscipit, nibh non ullamcorper euismod, sapien mi molestie purus, maximus porttitor diam urna at leo. Curabitur neque nunc, pellentesque a felis non, venenatis aliquam nulla. Praesent accumsan dolor non ullamcorper pharetra.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <p>Thank you for visiting!&nbsp;&nbsp;<i class="fas fa-coffee"></i></p>
+      <a href="#imgcontainer"><i class="fas fa-chevron-up"></i></a>
+      <div>
+        <a href="https://instagram.com/freecodepdx" target="_blank"><i class="fab fa-instagram"></i>&nbsp;freecodepdx</a>&nbsp;&nbsp;
+        <a href="mailto:freecodepdx@gmail.com" target="_blank"><i class="far fa-envelope"></i>&nbsp;freecodepdx@gmail.com</a>
+      </div>
+    <script>
+    const navSlide = () => {
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.nav');
+      const nav2 = document.querySelector('nav');
+      const logo = document.querySelector('.logo');
+      const navLinks = document.querySelectorAll('.nav li')
+
+      burger.addEventListener('click', () => {
+
+        //Toggle Nav
+        nav.classList.toggle('nav-active');
+        logo.classList.toggle('navactive');
+        nav2.classList.toggle('show');
+
+        //Animate Links
+        navLinks.forEach((link, index) => {
+          console.log(index);
+          if (link.style.animation) {
+            link.style.animation = ''
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+          }
+        });
+
+        //Burger animation
+        burger.classList.toggle('toggle');
+      });
+    }
+
+    navSlide();
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      document.body.classList.add("resize-animation-stopper");
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper");
+      }, 400);
+    });
+
+    if (scroll >= 5) {
+        header.removeClass('classinitial')
+                .addClass("classfinal");
+    } else {
+        header.removeClass("classfinal")
+                .addClass('classinitial');
+    }
+    </script>
+    <script>
+        $(function () {
+            var header = $(".classinitial");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 5) {
+                    header.removeClass('classinitial')
+                            .addClass("classfinal");
+                } else {
+                    header.removeClass("classfinal")
+                            .addClass('classinitial');
+                }
+            });
+        });
+    </script>
+  </body>
+</html>

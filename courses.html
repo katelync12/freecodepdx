@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="logo.PNG">
+    <title>Free Code PDX - Courses</title>
+    <script src="https://kit.fontawesome.com/a268a10631.js" crossorigin="anonymous"></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+    html {
+      scroll-behavior: smooth;
+    }
+    .resize-animation-stopper * {
+      animation: none !important;
+      transition: none !important;
+    }
+    @font-face {
+      font-family: Rubik;
+      src: url(Rubik-Regular.ttf);
+    }
+    @font-face {
+      font-family: Lora;
+      src: url(Lora-Medium.ttf);
+    }
+    body {
+      padding: 0;
+      margin: 0 auto;
+      background: white;
+      font-family: serif;
+      box-sizing: border-box;
+      font-family: Rubik, sans-serif;
+    }
+    /* navigation start */
+    nav { /* navigation bar */
+      z-index: 1;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 12vh;
+      padding: 0 25px;
+      transition: 0.5s ease;
+    }
+    .classfinal {
+      background-color: #222222;
+      min-height: 8vh;
+    }
+    .show {
+      background-color: transparent;
+    }
+    .logo { /* nav label on left */
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 20px;
+      font-family: Lora, serif;
+      transition: 0.5s ease;
+    }
+    .nav { /* collective links */
+      display: flex;
+      max-width: 600px;
+      width: 55vw;
+      justify-content: space-around;
+      padding-right: 50px;
+    }
+    .nav li {
+      list-style: none;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: Rubik, sans-serif;
+    }
+    .nav a:hover {
+      color: #72d5e0;
+    }
+    .burger {
+      display: none;
+      cursor: pointer;
+      padding-right: 50px;
+    }
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+      transition: all 0.5s ease;
+    }
+    @media (max-width: 768px) { /* mobile start */
+      body {
+        overflow-x: hidden;
+      }
+      .nav {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 0;
+        background-color: #303030;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+      }
+      .nav li {
+        opacity: 0;
+      }
+      .burger {
+        display: block;
+      }
+    }
+    .nav-active {
+      transform: translateX(0%);
+    }
+    .navactive {
+      opacity: 0;
+    }
+    @keyframes navLinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .toggle .line1 {
+      transform: rotate(-225deg) translate(5px, -6px);
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      transform: rotate(-135deg) translate(5px, 6px);
+    }
+    #sidenav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+      display: none;
+      transition: 0.5s ease;
+    }
+    .toggle #sidenav-overlay {
+      display: block;
+    } /* mobile end */
+    #imgcontainer { /* banner container */
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      overflow: hidden;
+      padding: 150px 10%;
+      font-family: Rubik, sans-serif;
+      text-align: center;
+    }
+    #imgcontainer:before {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      background-image: linear-gradient(rgba(116, 105, 150, 0.5), rgba(104, 110, 170, 0.5)), url("aboutbanner.jpg"); no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    #imgcontainer #header { /* title text */
+      color: white;
+      font-family: Lora, serif;
+      letter-spacing: 10px;
+      margin-bottom: 30px;
+    }
+    @media (min-width: 1205px) {
+      #imgcontainer #header {
+        font-size: 6em;
+      }
+      #imgcontainer h2 {
+        font-size: 2vw;
+        color: white;
+      }
+    }
+    @media (max-width: 1204px) {
+      #imgcontainer #header {
+        font-size: 8vw;
+      }
+      #imgcontainer h2 {
+        font-size: 3vw;
+        color: white;
+      }
+    }
+    /* navigation end */
+    #container {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      background: white;
+    }
+    .course1 {
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+      overflow: hidden;
+      transition: 0.2s ease-out;
+      margin-bottom: 70px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+    .course1 h4 {
+      text-align: center;
+      font-family: Lora;
+      font-size: 5em;
+      color: #29273a;
+    }
+    #contact-form {
+      width: 80%;
+      margin: 50px auto 0 auto;
+    }
+    #contact-form h2 {
+      font-family: Lora;
+      text-align: center;
+      color: #5374ba;
+      margin-bottom: 15px;
+    }
+    #contact-form form .form-control {
+      font-family: Rubik;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    #contact-form form .submit {
+      background-color: #494384;
+      color: white;
+      padding: 12px auto;
+      border: none;
+      cursor: pointer;
+      width: 20%;
+      border-radius: 5px;
+      transition: 0.5s ease;
+      -webkit-appearance: none;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 1200px) {
+      #contact-form form .submit {
+        width: 120px;
+      }
+    }
+    #contact-form form .submit:hover {
+      background-color: #221f3a;
+      cursor: pointer;
+    }
+    .collapsible {
+      background-color: #5374ba;
+      color: white;
+      cursor: pointer;
+      padding: 18px 5%;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 25px;
+      font-family: Lora;
+      margin: 0 0;
+    }
+    .active, .collapsible:hover {
+      background-color: #494384;
+    }
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+    .content {
+      width: 100%;
+      margin: 0 auto;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.2s ease-out;
+      background-color: #F7F7F7;
+    }
+    h2 {
+      margin: 0;
+      font-size: 2em;
+      color: #5374ba;
+    }
+    #container p {
+      font-size: 1.3em;
+      line-height: 1.25em;
+      color: #22223a;
+      font-weight: normal;
+    }
+    #footer {
+      width: 90%;
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 5%;
+    }
+    #footer p {
+      margin: 0;
+    }
+    @media (max-width: 800px) {
+      #footer {
+        font-size: 2vw;
+      }
+    }
+    #footer div {
+      letter-spacing: 1px;
+    }
+    #footer a {
+      color: white;
+      transition: 0.5s ease;
+      text-decoration: none;
+    }
+    #footer a:hover {
+      color: #72d5e0;
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- navigation start -->
+    <nav class="classinitial">
+      <div class="logo">
+        <h4>Free Code PDX</h4>
+      </div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="meet.html">Our Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div id="sidenav-overlay"></div>
+      </div>
+    </nav>
+    <div id="imgcontainer">
+      <div id="header">Courses</div>
+      <h2>Python and JavaScript/HTML</h2>
+    </div>
+    <!-- navigation end -->
+    <div id="container">
+      <div class="course1">
+        <!-- <h4>2020-2021</h4> -->
+        <h2>Python</h2>
+        <h3><i class="fas fa-calendar"></i>&nbsp; Monday-Friday, 6/21 to 7/2/21 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i>&nbsp; 1 - 2:30pm</h3>
+        <h3><i class="fas fa-user"></i>&nbsp; Sriya Tallapragada and Garison Julius</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo gravida eleifend. Phasellus ac laoreet orci. Nam sed ultricies enim. Sed sed ipsum tortor. Curabitur eu suscipit nulla, at ullamcorper purus. Proin vehicula finibus ante, suscipit vestibulum diam aliquam eu. Vivamus luctus feugiat lobortis. Ut molestie elit.
+        </p>
+        <button type="button" class="collapsible">Register for this course!</button>
+        <div class="content">
+          <br>
+          <div id="contact-form">
+            <h2>Python Course Registration</h2>
+            <form onsubmit="setTimeout(cleareverything, 10);" action="https://formspree.io/f/xvodznnr" method="POST" id="mG61Hd">
+              <input name="Name (first and last)" type="text" class="form-control" placeholder="Name (first and last)" required><br>
+              <input name="Email" type="email" class="form-control" placeholder="Email" required><br>
+              <input name="Grade" type="number"  min="1" max="12" class="form-control" placeholder="Grade (for the upcoming school year)" required><br>
+              <textarea name="Questions? Comments?" class="form-control" placeholder="Questions? We look forward to seeing you!" rows="4"></textarea><br>
+              <input type="submit" class="form-control submit" value="SUBMIT">
+            </form>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="course1">
+        <h2>HTML and JavaScript</h2>
+        <h3><i class="fas fa-calendar"></i>&nbsp; Monday-Friday, 6/21 to 7/2/21 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i>&nbsp; 7 - 8:30pm</h3>
+        <h3><i class="fas fa-user"></i>&nbsp; Adrian Baker</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo gravida eleifend. Phasellus ac laoreet orci. Nam sed ultricies enim. Sed sed ipsum tortor. Curabitur eu suscipit nulla, at ullamcorper purus. Proin vehicula finibus ante, suscipit vestibulum diam aliquam eu. Vivamus luctus feugiat lobortis. Ut molestie elit.
+        </p>
+        <button type="button" class="collapsible">Register for this course!</button>
+        <div class="content">
+          <br>
+          <div id="contact-form">
+            <h2>HTML and JavaScript Course Registration</h2>
+            <form onsubmit="setTimeout(cleareverything, 10);" action="https://formspree.io/f/xwkavjjq" method="POST" id="mG61Hd">
+              <input name="Name (first and last)" type="text" class="form-control" placeholder="Name (first and last)" required><br>
+              <input name="Email" type="email" class="form-control" placeholder="Email" required><br>
+              <input name="Grade" type="number"  min="1" max="12" class="form-control" placeholder="Grade (for the upcoming school year)" required><br>
+              <textarea name="Questions? Comments?" class="form-control" placeholder="Questions? We look forward to seeing you!" rows="4"></textarea><br>
+              <input type="submit" class="form-control submit" value="SUBMIT">
+            </form>
+          </div>
+          <br>
+        </div>
+      </div>
+
+    </div>
+    <div id="footer">
+      <p>Thank you for visiting!&nbsp;&nbsp;<i class="fas fa-coffee"></i></p>
+      <a href="#imgcontainer"><i class="fas fa-chevron-up"></i></a>
+      <div>
+        <a href="https://instagram.com/freecodepdx" target="_blank"><i class="fab fa-instagram"></i>&nbsp;freecodepdx</a>&nbsp;&nbsp;
+        <a href="mailto:freecodepdx@gmail.com" target="_blank"><i class="far fa-envelope"></i>&nbsp;freecodepdx@gmail.com</a>
+      </div>
+    </div>
+    <script>
+    const navSlide = () => {
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.nav');
+      const nav2 = document.querySelector('nav');
+      const logo = document.querySelector('.logo');
+      const navLinks = document.querySelectorAll('.nav li')
+
+      burger.addEventListener('click', () => {
+
+        //Toggle Nav
+        nav.classList.toggle('nav-active');
+        logo.classList.toggle('navactive');
+        nav2.classList.toggle('show');
+
+        //Animate Links
+        navLinks.forEach((link, index) => {
+          console.log(index);
+          if (link.style.animation) {
+            link.style.animation = ''
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+          }
+        });
+
+        //Burger animation
+        burger.classList.toggle('toggle');
+      });
+    }
+
+    navSlide();
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      document.body.classList.add("resize-animation-stopper");
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper");
+      }, 400);
+    });
+
+    //collapsible
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+
+    if (scroll >= 5) {
+        header.removeClass('classinitial')
+                .addClass("classfinal");
+    } else {
+        header.removeClass("classfinal")
+                .addClass('classinitial');
+    }
+
+    function cleareverything() {
+      document.getElementById("mG61Hd").reset();
+    }
+    if (scroll >= 5) {
+        header.removeClass('classinitial')
+                .addClass("classfinal");
+    } else {
+        header.removeClass("classfinal")
+                .addClass('classinitial');
+    }
+    </script>
+    <script>
+        $(function () {
+            var header = $(".classinitial");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 5) {
+                    header.removeClass('classinitial')
+                            .addClass("classfinal");
+                } else {
+                    header.removeClass("classfinal")
+                            .addClass('classinitial');
+                }
+            });
+        });
+    </script>
+  </body>
+</html>
