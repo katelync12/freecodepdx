@@ -3,7 +3,7 @@
   <h3 align="center">Free Code PDX</h3>
 
   <p align="center">
-    We are a youth-led nonprofit organization that aims to make <b>coding free and accessible to all</b>. We provide free coding lessons to anyone interested in learning Python or JavaScript. Visit out website for more information.
+    Free Code PDX is a youth-led nonprofit organization that aims to <b>make coding free and accessible to all</b>. We provide free summer coding camps to anyone interested in learning Python, HTML, or JavaScript. Visit out website for more information.
     <br>
     <a href="http://freecodepdx.me/"><strong>Our website »</strong></a>
   </p>
