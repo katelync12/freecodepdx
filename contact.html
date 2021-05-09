@@ -212,6 +212,7 @@
       background: white;
       margin: 0;
       padding-bottom: 60px;
+      position: relative;
     }
     #container {
       margin: 0 auto;
@@ -318,6 +319,8 @@
       display: flex;
       justify-content: space-between;
       padding: 15px 5%;
+      position: absolute;
+      bottom: 0;
     }
     #footer p {
       margin: 0;
@@ -388,15 +391,16 @@
           </ul>
         </div>
       </div>
-
-    </div>
-    <div id="footer">
-      <p>Thank you for visiting!&nbsp;&nbsp;<i class="fas fa-coffee"></i></p>
-      <a href="#imgcontainer"><i class="fas fa-chevron-up"></i></a>
-      <div>
-        <a href="https://instagram.com/freecodepdx" target="_blank"><i class="fab fa-instagram"></i>&nbsp;freecodepdx</a>&nbsp;&nbsp;
-        <a href="mailto:freecodepdx@gmail.com" target="_blank"><i class="far fa-envelope"></i>&nbsp;freecodepdx@gmail.com</a>
+      <div id="footer">
+        <p>Thank you for visiting!&nbsp;&nbsp;<i class="fas fa-coffee"></i></p>
+        <a href="#imgcontainer"><i class="fas fa-chevron-up"></i></a>
+        <div>
+          <a href="https://instagram.com/freecodepdx" target="_blank"><i class="fab fa-instagram"></i>&nbsp;freecodepdx</a>&nbsp;&nbsp;
+          <a href="mailto:freecodepdx@gmail.com" target="_blank"><i class="far fa-envelope"></i>&nbsp;freecodepdx@gmail.com</a>
+        </div>
       </div>
+    </div>
+
     <script>
     const navSlide = () => {
       const burger = document.querySelector('.burger');
