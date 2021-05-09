@@ -219,12 +219,13 @@
       overflow: hidden;
       background: white;
       padding: 40px 50px;
-      display: flex;
       justify-content: center;
+      max-width: 1000px;
     }
     #formdiv {
       width: 55%;
       margin-right: 10%;
+      float: left;
     }
     #right_side {
       width: 35%;
@@ -232,6 +233,7 @@
       background: #F7F7F7;
       border-radius: 5px;
       overflow: hidden;
+      float: right;
     }
     #right_side h3 {
       font-size: 1.5em;
@@ -259,6 +261,7 @@
       #formdiv {
         width: 80%;
         margin-right: 10%;
+        float: none;
       }
     }
 
@@ -342,6 +345,52 @@
       color: #72d5e0;
       cursor: pointer;
     }
+
+
+
+
+
+    #bottom {
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 80%;
+    }
+    #bottom h3 {
+      font-size: 1.5em;
+      padding: 0 30px;
+      text-align: left;
+      margin-bottom: 15px;
+      color: #22223a;
+    }
+    #bottom ul {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      list-style: none;
+    }
+    #bottom a {
+      text-decoration: none;
+      color: #5374ba;
+      padding: 20px 30px;
+      display: block;
+      font-size: 1.3em;
+    }
+    @media (min-width: 1061px) {
+      #bottom {
+        display: none;
+      }
+    }
+
+    #bottom a:hover {
+      color: #F7F7F7;
+      background-color: #5374ba;
+    }
+
+
+
     </style>
   </head>
   <body>
@@ -388,9 +437,19 @@
           <ul>
             <li><a href="mailto:freecodepdx@gmail.com" target="_blank"><i class="far fa-envelope"></i>&nbsp;&nbsp;freecodepdx@gmail.com</a></li>
             <li><a href="https://instagram.com/freecodepdx" target="_blank"><i class="fab fa-instagram"></i>&nbsp;&nbsp;freecodepdx</a></li>
+            <br>
+          </ul>
+        </div>
+        <div id="bottom">
+          <h3>Contact Information</h3>
+          <ul>
+            <li><a href="mailto:freecodepdx@gmail.com" target="_blank"><i class="far fa-envelope"></i>&nbsp;&nbsp;freecodepdx@gmail.com</a></li>
+            <li><a href="https://instagram.com/freecodepdx" target="_blank"><i class="fab fa-instagram"></i>&nbsp;&nbsp;freecodepdx</a></li>
+            <br>
           </ul>
         </div>
       </div>
+
       <div id="footer">
         <p>Thank you for visiting!&nbsp;&nbsp;<i class="fas fa-coffee"></i></p>
         <a href="#imgcontainer"><i class="fas fa-chevron-up"></i></a>
