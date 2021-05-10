@@ -222,30 +222,34 @@
       box-shadow: 0 4px 8px 0 rgba(83, 116, 186, 0.2);
       overflow: hidden;
       border-radius: 10px;
-      display: flex;
       background-color: white;
+      position: relative;
+      width: 100%;
     }
     #container .left {
-      width: 150%;
-      float: left;
-      margin-right: 20px;
+      width: 30%;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
       overflow: hidden;
-    }
-    @media (max-width: 1100px) {
-      #container .left {
-        width: 175%;
-      }
-    }
-    @media (max-width: 900px) {
-      #container .left {
-        width: 400%;
-      }
+      display: block;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
     #container .right {
-      margin: 20px;
+      padding: 20px 4%;
+      float: right;
+      width: 62%;
+    }
+    @media (max-width: 1000px) {
+      #container .left {
+        width: 40%;
+      }
+      #container .right {
+        width: 52%;
+      }
     }
     #container h1 {
       margin: 10px 0;
@@ -372,7 +376,7 @@
             <h1>Sriya Tallapragada</h1>
             <h2>Python Course Instructor</h2>
             <p>
-              Sriya (she/her) is a junior at Westview High School and a Python Instructor at Free Code PDX. From a young age, she has taken part in many STEM-related activities, including coding. Over the years, she has worked with various coding languages, including Python, Java, JavaScript, and C++. This camp will allow her to spread her knowledge of coding and motivate students to approach STEM fields. 
+              Sriya (she/her) is a junior at Westview High School and a Python Instructor at Free Code PDX. From a young age, she has taken part in many STEM-related activities, including coding. Over the years, she has worked with various coding languages, including Python, Java, JavaScript, and C++. This camp will allow her to spread her knowledge of coding and motivate students to approach STEM fields.
               <br><br>
               <a href="mailto:sriya.tripura@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
             </p>
